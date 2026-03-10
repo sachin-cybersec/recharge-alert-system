@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* background-color: #1e1e1e; */
+    background-color: black;
+    color: #c6f00f;
+    /* color: black; */
+}
+.section{
+    height: 100px;
+}
+h1{
+    font-size: 50px;
+    padding: 50px;
+    margin-left: 40px;
+    text-decoration: underline;
+    
+}
+
+/* Recharge Plans Section Styles */
+.recharge-plans {
+    padding: 60px 0;
+    /* background-color: #2c2c2c; */
+    background-color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan-column {
+    
+    background: linear-gradient(106deg, rgb(0 0 0), #deef93);
+    padding: 20px;
+    border-radius: 25px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 32%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 41px;
+    
+}
+
+.plan-column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.plan-header h3 {
+    font-size: 24px;
+    color: rgb(201, 223, 77);
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    /* font-weight: bold; */
+}
+
+.plan-header p {
+    font-size: 16px;
+    color: #d0d0d0;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+.plan-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.plan-details strong {
+    color: #fcf94e;
+}
+
+.plan-action {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-recharge {
+    padding: 12px 25px;
+    background-color: #ff8c00;
+    color: #f0f0f0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    /* margin-bottom: 10px; */
+}
+
+.btn-recharge:hover {
+    background-color: #e57a00;
+}

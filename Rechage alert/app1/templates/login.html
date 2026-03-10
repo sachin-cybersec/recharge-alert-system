@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    <div id="vid-bg">
+        <video autoplay loop muted plays-inline class="login-vid">
+            <source src="/static/login-vid.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="login-container">
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            <h2>LOGIN</h2>
+            <div class="input-group">
+                <label for="phone number">Phone number</label>
+                <input type="number" id=" phone number" name="phone number" placeholder="Enter your phone number"  required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>            
+            <button class="login-btn" type="submit">Log in</button><br>
+            
+    
+        </form>
+        <button class="want-acc"><a style="color: black;" href="{% url 'signup' %}">Don't have account ?</a></button>
+    </div>
+</body>
+</html>

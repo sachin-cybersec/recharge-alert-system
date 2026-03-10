@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="/static/signup.css">
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+         const passwordInput = document.getElementById('create-password');
+         const toggleVisibility = document.getElementById('toggleVisibility');
+         const confirmPasswordInput = document.getElementById('confirm-password');
+         const toggleConfirmVisibility = document.getElementById('toggleConfirmVisibility');
+         
+         // Toggle visibility for create password
+         toggleVisibility.addEventListener('click', () => {
+           if (passwordInput.type === 'password') {
+             passwordInput.type = 'text';
+             toggleVisibility.className = 'fa-eye-slash';
+           } else {
+             passwordInput.type = 'password';
+             toggleVisibility.className = 'fa-eye';
+           }
+         });
+
+         // Toggle visibility for confirm password
+         toggleConfirmVisibility.addEventListener('click', () => {
+           if (confirmPasswordInput.type === 'password') {
+             confirmPasswordInput.type = 'text';
+             toggleConfirmVisibility.className = 'fa-eye-slash';
+           } else {
+             confirmPasswordInput.type = 'password';
+             toggleConfirmVisibility.className = 'fa-eye';
+           }
+         });
+       });
+   </script>
+</head>
+<body>
+    <div id="signup-video">
+        <video autoplay loop muted plays-inline class="signup-vid">
+            <source src="/static/signup-video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="signup-container">
+        <form method="post" class="signup-form">
+            {% csrf_token %}
+            <h2 class="heading">SIGN UP</h2>
+            <div class="input-group">
+                <label for="phone-number">PHONE NUMBER</label>
+                <input type="tel" id="phone-number" name="phone number" placeholder="Enter your number" minlength="10" maxlength="10" pattern="[0-9]{10}" title="Must contain exactly 10 digits" required>
+            </div>
+            <div class="input">
+                <label for="create-password">CREATE PASSWORD</label>
+                <input type="password" id="create-password" class="clickbox" name="create-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters" placeholder="Create a password" required>
+                <input class="clickb" type="checkbox" id="toggleVisibility"> 
+            </div>
+            <div class="input">
+                <label for="confirm-password">CONFIRM PASSWORD</label>
+                <input id="confirm-password" name="confirm-password" type="password" class="clickbox" placeholder="Confirm password" required>
+                <input class="clickb" type="checkbox" id="toggleConfirmVisibility">
+            </div>
+            <button class="signup-btn" type="submit">Sign Up</button><br>
+        </form>
+        <div>
+            <button class="have-acc"><a style="color: white;" href="{% url 'login' %}">Already have an account?</a></button>
+        </div>
+    </div>
+</body>
+</html>

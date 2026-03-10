@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <link rel="stylesheet" href="/static/main.css"> 
+    
+    <body>
+        <div class="header">
+            <a href="{% url 'main' %}">
+                <div class="logo">
+                    <img src="/static/RechareKro.png" alt="">
+                </div>
+            </a>
+            <div class="header-button">
+                
+                    <button><a href="#sim">Mobile recharge</a></button>
+                    <button><a href="#ott">OTT recharge</a></button>
+                    <button><a href="">Contact us</a></button>         
+                    <button><a href="{% url 'login' %}">Log in</a></button>                   
+                    <button><a href="{% url 'signup' %}">sign up</a></button>
+                
+            </div>
+        </div>
+
+        <section class="section-0">
+            <!-- <img src="/static/Recharge.png" alt="hello"> -->
+        </section>
+        
+        <section class="section-1"  id="sim">
+            <h1 class="h11">Mobile Recharges</h1>
+            <div class="column">
+                <a href="{% url 'airtelplan' %}">
+                    <div class="airtel">
+                        <img src="/static/airtel.png" alt="airtel" usemap="#airtel" width="160px" height="160px" style="padding-top: 13px" >
+                    </div>
+                </a>
+                <a href="{% url 'jioplan' %}">
+                    <div class="jio">
+                        <img src="/static/jio.jpg" alt="jio" width="190px" height="140px" style="padding-top: 20px;">
+                    </div>
+                </a>
+                <a href="{%  url 'viplan' %}">
+                    <div class="vi">
+                        <img src="/static/Vodafone.png" alt="vodafone" width="160px" height="180px" style="padding-top: 13px">
+                    </div>
+                </a>
+           </div>
+        </section>
+
+        <section class="section-2" id="ott">
+            <h2>Ott Recharges</h2>
+            <div class="column2">
+                <a href="{% url 'netflixplan' %}">
+                    <button class="netflix">
+                        <!-- <input type="image" src="/static/netflix1.png" alt="netflix",width="70px" height="123px" style="padding-top: 20px"> -->
+                    </button>
+                </a>                
+                <a href="{% url 'disneyplan' %}">
+                    <button class="disney">
+                        <!-- <img src="/static/disney.avif" alt="disney" width="250px" height="170px" style="padding-top: 10px;" >  -->
+                    </button>
+                </a>
+                <a href="{%url 'hotstarplan'%}">
+                    <button class="hotstar">
+                        <div class="hotstarimage">
+                        <!-- <img src="/static/hotstar.jpg" alt="hotstar" width="180px" height="170px"> -->
+                            <!-- <img src="/static/hotstar.jpg" > -->
+                        </div>  
+                    </button>
+                </a>
+            </div>
+        </section>
+
+        <section class="section-3">
+            <h3>Need guidance?</h3>
+            <p>We would love to help you.</p>
+            <button class="button">Chat with us</button>
+            <button class="button2">Call with us</button>
+        </section>
+        
+        <section class="section-4">
+            <div class="column3">
+                <div class="aboutus">
+                    <h5>About us</h5>
+                    <p class="companydetail">Welcome to Rechargekro , your one-stop destination forquick, easy,and
+                         reliable mobilerecharges. Since our inception in 2017,we have been dedicated 
+                        to simplifying the recharge process for millions of users across India.
+                    </p>
+                    <h6 class="margin">What we do</h6>
+                    <p class="whatwedo">
+                        We specialize in providing instant and secure mobile recharges for 
+                        all major operators, including list a few operators Airtel, Vodafone, Jio.
+                    </p>
+                </div>
+                <div class="follow">
+                    <h4>Connect with us</h4>
+                    <div class="social-media">
+                        
+                        <button class="instagram_txt"><a style="color: black;" href="http://www.instagram.com"> Instagram</a></button>
+                        <button class="facebook_txt"><a style="color: black;"  href="http://www.facebook.com"> Facebook</a></button>
+                        <button class="twitter_txt"><a style="color: black;" href="http://www.twitter.com">Tswitter</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </body>
+
+</html>

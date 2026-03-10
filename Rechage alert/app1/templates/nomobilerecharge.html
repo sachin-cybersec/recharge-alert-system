@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomobilerecharge</title>
+    <link rel="stylesheet" href="/static/nomobilerecharge.css">
+    <link rel="stylesheet" href="/static/main.css"> 
+</head>
+<body>
+     <div class="header">
+        <a href="{% url 'main' %}">
+            <div class="logo"><img src="/static/RechareKro.png" alt=""></div>
+        </a>
+        <div class="nav">
+            <ul>
+            <li><a href="">Mobile recharge</a></li>
+            <li><a href="">OTT recharge</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Chat with us</a></li>
+            <li><a href="{% url 'login' %}">Log in</a></li>
+            <li><a href="{% url 'signup' %}">sign up</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="section">
+        <div class = nomobilerecharge>
+            <h1 class="h1">Opps!</h1>
+            <h2 class="h2">You do not have any mobile Recharge!</h2>
+            <button class="button" type="submit">
+                Recharge now
+            </button>
+        </div>
+    </section>
+</body>
+</html>

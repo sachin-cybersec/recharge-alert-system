@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    /* background-color: #1e1e1e; */
+    background-color: #75b5fd;
+    color: #f0f0f0;
+}
+.section{
+    height: 100px;
+}
+h1{
+    font-size: 50px;
+    padding: 50px;
+    margin-left: 40px;
+    text-decoration: underline;
+    color:black
+}
+
+
+.recharge-plans {
+    padding: 60px 0;
+
+    background-color: #75b5fd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.plan-column {
+    
+    background: linear-gradient(135deg,rgb(28, 3, 255),rgb(122, 114, 233));
+    padding: 20px;
+    border-radius: 25px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 32%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 41px;
+    
+}
+
+.plan-column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.plan-header h3 {
+    font-size: 24px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.plan-header p {
+    font-size: 16px;
+    color: #d0d0d0;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+.plan-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #f0f0f0;
+}
+
+.plan-details strong {
+    color: #ff8c00;
+}
+
+.plan-action {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-recharge {
+    padding: 12px 25px;
+    background-color: #ff8c00;
+    color: #f0f0f0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+} 
+    
+
+.btn-recharge:hover {
+    
+    background-color: #ff8c00;
+}
+
+/* Styling for the button */
+.open-popup {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* Fullscreen popup overlay styling */
+  .popup-overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  /* Popup content styling */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }

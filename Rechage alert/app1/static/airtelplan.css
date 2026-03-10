@@ -1,0 +1,89 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    background-color: black;
+}
+.section{
+    height: 100px;  
+    background-color: black;
+    
+}
+h1{
+    font-size: 50px;
+    padding: 70px;
+    text-decoration: underline;
+}
+.recharge-plans {
+    padding: 60px 0;
+    background-color: #000000;    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* background-color: white; */
+}
+
+.plan-column {
+    background-color: #000000;
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 32%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 41px;
+}
+
+.plan-column:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.plan-header h3 {
+    font-size: 24px;
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.plan-header p {
+    font-size: 16px;
+    color: #d0d0d0;
+}
+
+.plan-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #f0f0f0;
+}
+
+.plan-details strong {
+    color: #ff8c00;
+}
+
+.plan-action {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-recharge {
+    padding: 12px 25px;
+    background-color: #ff8c00;
+    color: #f0f0f0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-recharge:hover {
+    background-color: #e57a00;
+}

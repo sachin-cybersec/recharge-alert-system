@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+        let isCountingDown = false; 
+        let isCountingDo =false;
+        function startCountdown()
+         {
+            if (isCountingDown,isCountingDo)
+             {
+                alert("Your current plan is active");
+                return;
+             }
+            isCountingDown = true; 
+            let countdownValue = 10;
+            let countdownDisplay = document.getElementById("countdown-display");
+            let startButton = document.getElementById("start-button");          
+            startButton.disabled = true;           
+            let countdownInterval = setInterval(function() 
+            {
+                countdownDisplay.innerHTML = countdownValue;
+                countdownValue--;             
+                if (countdownValue < 0) 
+                {
+                    clearInterval(countdownInterval);
+                    alert("Alert! Your basic plan has been completed");                   
+                    isCountingDown = false;
+                    startButton.disabled = false;
+                    countdownDisplay.innerHTML = "10";
+                }
+            }, 1000); 
+        }
+    
+        //second
+        
+        function startCountdo()
+         {
+            if (isCountingDo,isCountingDown)
+             {
+                alert("Your current plan is active");
+                return;
+             }
+            isCountingDo = true; 
+            let countdownValue = 2419200;
+            let countdownDisplay = document.getElementById("countdown-displ");
+            let startButton = document.getElementById("start-butt");          
+            startButton.disabled = true;           
+            let countdownInterval = setInterval(function() 
+            {
+                countdownDisplay.innerHTML = countdownValue;
+                countdownValue--;             
+                if (countdownValue < 0) 
+                {
+                    clearInterval(countdownInterval);
+                    alert("Alert!Your premium plan has been ended");                   
+                    isCountingDown = false;
+                    startButton.disabled = false;
+                    countdownDisplay.innerHTML = "2419200";
+                }
+            }, 1000); 
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Plans</title>
+    <link rel="stylesheet" href="/static/viplan.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body> 
+    <div class="header">
+        <a href="{% url 'main' %}">
+            <div class="logo"><img src="/static/RechareKro.png" alt=""></div>
+        </a>
+        <div class="header-button">
+            <ul>
+                <button><a href="{% url 'login' %}">Log in</a></button>
+                <button><a href="{% url 'signup' %}">sign up</a></button>
+            </ul>
+        </div>
+    </div>
+    <section class="section">
+        <h1 class="h1">VI recharges</h1>
+    </section>
+    <section class="recharge-plans">
+        <div class="container">
+            <div class="plan-column">
+                <div class="plan-header">
+                    <h3>VI Basic Plan</h3>
+                    <p>Great for light users</p>
+                </div>
+                <div class="plan-details">
+                    <p><strong>Data:</strong> 1 GB/day</p>
+                    <p><strong>Talktime:</strong> 100 minutes/day</p>
+                    <p><strong>Validity:</strong> 10 second</p>
+                    <p><strong>Price:</strong> free</p>
+                </div>
+                <h1 hidden >Countdown Timer</h1>
+<p hidden >Time remaining: <span id="countdown-display">10</span> seconds</p>
+<div class="plan-action" id="start-button" onclick="startCountdown()" style="cursor:pointer">
+    <a href="#" class="btn-recharge">Recharge Now</a>
+</div>
+            </div>
+
+            
+            <div class="plan-column">
+                <div class="plan-header">
+                    <h3>VI Premium Plan</h3>
+                    <p>Best for heavy users</p>
+                </div>
+                <div class="plan-details">
+                    <p><strong>Data:</strong> 3 GB/day</p>
+                    <p><strong>Talktime:</strong> Unlimited</p>
+                    <p><strong>Validity:</strong> 28 days</p>
+                    <p><strong>Price:</strong> 255rs</p>
+                </div>
+                <h3 hidden>Countdown Timer</h3>
+<p hidden>Time remaining: <span id="countdown-displ">2419200</span> seconds</p>            
+<div class="plan-action" id="start-butt" onclick="startCountdo()" style="cursor:pointer">
+    <a href="#" class="btn-recharge">Recharge Now</a>
+</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
